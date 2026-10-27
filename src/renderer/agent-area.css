@@ -1,0 +1,49 @@
+.agent-area { height: 100dvh; min-width: 1000px; background: #fafdfe; color: #253438; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 13px; }
+.agent-area-header { position: fixed; inset: 0 0 auto; height: 88px; background: #fafdfe; border-bottom: 1px solid #dce8eb; }
+.agent-area-heading { height: 56px; display: flex; align-items: center; gap: 24px; padding: 0 20px 0 88px; -webkit-app-region: drag; }
+.agent-area-heading h1 { margin: 0; font-size: 14px; font-weight: 650; white-space: nowrap; }
+.agent-area-heading p { margin: 0; font-size: 12px; color: #5b6d73; }
+.agent-area-main-chrome { height: 32px; margin-left: 280px; display: flex; align-items: center; gap: 12px; padding: 0 12px; background: #eaf8fa; font-size: 12px; box-shadow: inset 0 1px #dce8eb; }
+.agent-area-grid { position: fixed; top: 88px; right: 0; bottom: 0; left: 280px; display: grid; gap: 0; background: #fff; }
+.agent-area-pane { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
+/* Cell origin and the native 32px inset must never gain gaps, padding or borders. */
+.agent-area-pane-chrome { height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 6px; background: #fafdfe; box-shadow: inset -1px -1px #dce8eb; font-size: 12px; }
+.agent-area-page-title { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: 0; font-size: inherit; font-weight: 550; }
+.agent-area-status { flex: 0 1 auto; min-width: 0; max-width: 145px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #5b6d73; }
+.agent-area-page-actions { flex: 0 0 auto; display: flex; gap: 4px; }
+.agent-area button { -webkit-app-region: no-drag; border: 1px solid #d4e3e6; color: #253438; background: #fafdfe; border-radius: 6px; min-height: 26px; padding: 3px 8px; font: inherit; font-size: 12px; cursor: pointer; }
+.agent-area button:hover:not(:disabled) { background: #eaf8fa; border-color: #b1d1d8; }
+.agent-area button:disabled { opacity: .5; cursor: not-allowed; }
+.agent-area button:focus-visible, .agent-area summary:focus-visible, .agent-area-task-list:focus-visible, .agent-area-inspector-scroll:focus-visible { outline: 2px solid #367782; outline-offset: -2px; }
+.agent-area-pane-chrome .agent-area-status { max-width: 90px; }
+.agent-area-pane-chrome button { min-height: 26px; padding: 2px 6px; font-size: 12px; }
+.agent-area-empty { position: absolute; top: 50%; left: 0; right: 0; text-align: center; color: #5b6d73; font-size: 13px; }
+.agent-area-inspector { position: fixed; top: 56px; right: auto; bottom: 0; left: 0; width: 280px; background: #fafdfe; box-shadow: inset -1px 0 #dce8eb; display: flex; flex-direction: column; min-height: 0; }
+.agent-area-inspector-heading { flex: 0 0 auto; display: grid; gap: 5px; padding: 16px 18px 12px; }
+.agent-area-inspector-heading h2 { margin: 0; font-size: 15px; font-weight: 650; }
+.agent-area-task-list { flex: 0 1 auto; min-height: 60px; max-height: 38%; overflow-y: auto; padding: 0 10px 14px; overscroll-behavior: contain; }
+.agent-area-task-group h3 { margin: 4px 8px 8px; color: #5b6d73; font-size: 12px; font-weight: 600; overflow-wrap: anywhere; }
+.agent-area button.agent-area-task { display: flex; flex-direction: column; align-items: flex-start; width: 100%; margin: 4px 0; padding: 10px 12px; min-height: 54px; text-align: left; border-color: transparent; background: transparent; gap: 4px; }
+.agent-area button.agent-area-task[aria-pressed="true"] { background: #eaf8fa; border-color: #c8e5e9; }
+.agent-area-task span { font-size: 13px; line-height: 1.5; font-weight: 600; overflow-wrap: anywhere; }
+.agent-area-task small, .agent-area-task-unavailable small { color: #5b6d73; font-size: 12px; line-height: 1.5; }
+.agent-area-task-unavailable { display: grid; gap: 4px; padding: 10px 12px; color: #5b6d73; overflow-wrap: anywhere; }
+.agent-area-inspector-scroll { overflow-y: auto; flex: 1; min-height: 0; padding: 18px; border-top: 1px solid #dce8eb; overscroll-behavior: contain; overflow-wrap: anywhere; line-height: 1.7; font-size: 13px; }
+.agent-area-inspector-scroll section { margin-bottom: 20px; }
+.agent-area-inspector-scroll h3 { font-size: 13px; font-weight: 650; margin: 0 0 8px; }
+.agent-area-current h3 { font-size: 16px; line-height: 1.5; }
+.agent-area-current p { margin: 6px 0; }
+.agent-area-real-text { white-space: pre-wrap; overflow-wrap: anywhere; margin: 8px 0; }
+.agent-area-muted { color: #5b6d73; font-size: 12px; }
+.agent-area-error { color: #a2413c; }
+.agent-area-request { margin: 18px 0; border-top: 1px solid #dce8eb; padding-top: 14px; }
+.agent-area-request summary { color: #5b6d73; cursor: pointer; font-size: 12px; }
+.agent-area-approval { padding: 12px; border: 1px solid #d8c8a8; background: #fbf8f0; border-radius: 8px; }
+.agent-area-approval h3 { color: #74582b; }
+.agent-area-approval dl { margin: 12px 0; font-size: 12px; }
+.agent-area-approval dt { color: #5b6d73; margin-top: 8px; }
+.agent-area-approval dd { margin: 0; overflow-wrap: anywhere; }
+.agent-area-approval button { width: 100%; min-height: 36px; border-color: #c6b088; color: #684b20; }
+.agent-area-artifacts { list-style: none; margin: 12px 0 0; padding: 0; }
+.agent-area-artifacts li { margin-top: 8px; }
+.agent-area-artifacts button { width: 100%; text-align: left; overflow-wrap: anywhere; }

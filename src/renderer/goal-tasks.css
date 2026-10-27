@@ -1,0 +1,11 @@
+.goal-tasks { padding: 20px; min-width: 0; }
+.goal-tasks h3, .goal-tasks h4 { margin: 0 0 8px; overflow-wrap: anywhere; }
+.goal-prompt, .goal-child p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.goal-status { margin: 12px 0; font-weight: 600; }
+.goal-children { list-style: none; padding: 0; margin: 16px 0 0; }
+.goal-child { border-top: 1px solid var(--border, #e5e5e5); padding: 16px 0; }
+.goal-child h4 { font-size: 14px; }
+.goal-child p { font-size: 13px; line-height: 1.6; }
+.goal-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.goal-approval { margin-top: 12px; }
+.goal-approval button + button { margin-left: 8px; }
